@@ -122,9 +122,10 @@ function darkModeProperties() {
   root.setProperty("--lm-icon-bg", "brightness(1000%)");
   darkMode = true;
   console.log("darkmode changed to " + darkMode);
-  localStorage.setItem("dark-mode", true);  console.log("setting dark mode to false");
+  localStorage.setItem("dark-mode", true);
+  // console.log("setting dark mode to false");
 
-  console.log("setting dark mode to true");
+  // console.log("setting dark mode to true");
 
 }
 
@@ -141,8 +142,8 @@ function lightModeProperties() {
   darkMode = false;
   console.log("darkmode changed to " + darkMode);
 
-  localStorage.setItem("dark-mode", false);
-  console.log("setting dark mode to false");
+  // localStorage.setItem("dark-mode", false);
+  // console.log("setting dark mode to false");
 }
 
 
@@ -159,16 +160,16 @@ function init() {
   const value = localStorage.getItem("dark-mode");
 
   if(value === null) {
-    console.log("null k andar");
+    // console.log("null k andar");
     localStorage.setItem("dark-mode", darkMode);
     lightModeProperties();
   }
   else if(value == "true") {
-    console.log("true k andar");
+    // console.log("true k andar");
     darkModeProperties();
   }
   else if(value == "false") {
-    console.log("false k andar");
+    // console.log("false k andar");
     lightModeProperties();
   }
 
